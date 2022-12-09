@@ -1,0 +1,2 @@
+print("mogus")
+print("drip")
