@@ -9,7 +9,7 @@ from discord.ext import commands
 import sqlite3
 import logging
 
-openai.api_key = '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'
+openai.api_key = os.environ.get("OPENAI_API_SECRET")
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -151,7 +151,7 @@ class RandomThings(commands.Cog):
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-TOKEN = "MTA4OTkwMzM3MTY1OTUyNjE5NA.Gp6plu.R9ufgniqHu4xXF2ojiUlxSlkNYN4L27lhTxdGY"
+TOKEN = os.environ.get("BOT_TOKEN_SECRET")
 
 
 async def main():
